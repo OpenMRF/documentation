@@ -6,8 +6,8 @@ hide:
     - toc 
 ---
 
-!!! warning "Website under active construction"
-    Please take a look around and explore the OpenMRF documentation. Just be aware that this is work in progress and more detailed information on certain aspects of the framework will be added soon. 
+<!-- !!! warning "Website under active construction"
+    Please take a look around and explore the OpenMRF documentation. Just be aware that this is work in progress and more detailed information on certain aspects of the framework will be added soon.  -->
 
 <br>
 
@@ -25,7 +25,7 @@ hide:
 
 <br>
 
-# Welcome to the OpenMRF Documentation website! 
+# Welcome to OpenMRF! 
 
 OpenMRF is currently under active development. A corresponding publication describing the framework in detail will be released soon. Please watch out for this publication and use it for citation once available.
 
