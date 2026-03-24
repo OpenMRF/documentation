@@ -1,4 +1,4 @@
-![OpenMRF](openmrf-documentation/docs/assets/OpenMRF_banner.png)
+![OpenMRF](docs/assets/OpenMRF_banner.png)
 
 # Documentation
 
