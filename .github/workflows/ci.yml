@@ -28,4 +28,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
+      - name: Ensure GitHub Pages custom domain
+        run: echo "openmrf.org" > docs/CNAME
       - run: mkdocs gh-deploy --force
