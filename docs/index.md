@@ -17,11 +17,14 @@ hide:
 
 <br>
 
-<div class="center-buttons">
+<div class="center-buttons" markdown="1">
   <a href="quickstart" class="md-button"> 🚀 Quickstart Guide</a>
-  <a href="wiki" class="md-button"> 📚 Wiki</a>
-  <a href="https://github.com/OpenMRF/openmrf-core-matlab" class="md-button" target="_blank"> 💻 CODE </a>
+  <!-- <a href="wiki" class="md-button"> 📚 Wiki</a> -->
   <!-- <a href="#citation" class="md-button"> 📝 Citation </a> -->
+<!-- </div>
+
+<!-- <div class="center-buttons" markdown="1"> -->
+[:fontawesome-brands-github: Github repository](https://github.com/OpenMRF/openmrf-core-matlab){ .md-button target="_blank" }
 </div>
 
 <br>
@@ -36,7 +39,7 @@ We strongly recommend getting started by reading the [Quickstart guide](quicksta
 Coming soon! -->
 
 ## Introduction
-OpenMRF is a modular and vendor-neutral framework for Magnetic Resonance Fingerprinting (MRF) built on the open-source [Pulseq](https://pulseq.github.io) standard. It is built upon the MATLAB version of Pulseq by Kelvin J. Layton and Maxim Zaitsev ([doi:10.1002/mrm.26235](https://doi.org/10.1002/mrm.26235)). OpenMRF unifies all core components of the MRF workflow within a single MATLAB-based toolbox: flexible sequence generation, automated Bloch-based dictionary simulation, and low-rank image reconstruction. The provided tools support a wide range of contrast preparations and readouts (e.g., spiral, radial, rosette) and include integrated solutions for trajectory calibration, spin-lock modeling, slice profile simulation, and metadata storage. Designed for reproducibility and portability, OpenMRF enables easy deployment of MRF protocols across multiple scanner platforms, including Siemens, GE, Philips and United Imaging systems.
+OpenMRF is a modular and vendor-neutral [open-source](https://github.com/OpenMRF/openmrf-core-matlab) framework for Magnetic Resonance Fingerprinting (MRF) built on the [Pulseq](https://pulseq.github.io) standard. It is built upon the MATLAB version of Pulseq by Kelvin J. Layton and Maxim Zaitsev ([doi:10.1002/mrm.26235](https://doi.org/10.1002/mrm.26235)). OpenMRF unifies all core components of the MRF workflow within a single MATLAB-based toolbox: flexible sequence generation, automated Bloch-based dictionary simulation, and low-rank image reconstruction. The provided tools support a wide range of contrast preparations and readouts (e.g., spiral, radial, rosette) and include integrated solutions for trajectory calibration, spin-lock modeling, slice profile simulation, and metadata storage. Designed for reproducibility and portability, OpenMRF enables easy deployment of MRF protocols across multiple scanner platforms, including Siemens, GE, Philips and United Imaging systems.
 
 ## Codebase overview
 - `include_cwru/`: Contains MRF-specific source code governed by a separate **End User License Agreement (EULA)** provided by Case Western Reserve University.
