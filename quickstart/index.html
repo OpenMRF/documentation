@@ -1240,33 +1240,27 @@
 <h1 id="quickstart-guide"><img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f680.svg" title=":rocket:" /> Quickstart Guide</h1>
 <p>The following steps briefly outline how to set up OpenMRF, compile a basic sequence, and reconstruct parametric maps from the acquired data.</p>
 <h2 id="0-recommended-directory-setup">0. Recommended directory setup</h2>
-<p>Before cloning the main OpenMRF repository, we recommend creating a top-level folder called <code>OpenMRF</code> and keeping the main framework code separate from your individual projects. Here's a suggested example file tree: </p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>OpenMRF/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|-- openmrf-core-matlab/
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>|---Pulseq_Workspace/
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>|-- project_1/
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>`-- project_2/
-</span></code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>You don't need to create the <code>openmrf-core-matlab</code> and <code>Pulseq_Workspace</code> subfolders manually - just follow the steps below. </p>
-</div>
+<p>Before cloning the main OpenMRF repository, we recommend creating a top-level folder called <code>OpenMRF</code> at your preferred location and keeping the main framework code separate from your individual projects. </p>
 <h2 id="1-clone-the-repository">1. Clone the repository.</h2>
 <p>Go to <a href="https://github.com/OpenMRF/openmrf-core-matlab">https://github.com/OpenMRF/openmrf-core-matlab</a>. We recommend you fork the repository - this will allow you to make and keep track of changes while also staying up to date with our updates. Then, open a terminal, navigate to the location where you want your code to live (if you follow the above recommendation, this would be the <code>OpenMRF</code> folder), and run </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Original repo</label><label for="__tabbed_1_2">Forked repo</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;git@github.com:OpenMRF/openmrf-core-matlab.git&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;git@github.com:OpenMRF/openmrf-core-matlab.git&gt;
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;link-to-your-forked-repo&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;link-to-your-forked-repo&gt;
 </span></code></pre></div>
 </div>
 </div>
 </div>
+<p>This will create the following file tree:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>- OpenMRF
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    `-- openmrf-core-matlab
+</span></code></pre></div></p>
 <h2 id="2-addconfirm-system-specifications">2. Add/confirm system specifications.</h2>
-<p>Navigate to <code>user_specifications/system_definitions</code> and check whether there
+<p>In the <code>openmrf-core-matlab</code> folder, navigate to <code>user_specifications/system_definitions</code> and check whether there
 exists a <code>.csv</code> file with your scanner’s system specifications. If it does, still open it and double check that the specifications listed are accurate. If it doesn’t, create a file for your scanner using one of the existing files as a template, and save it in the same location using the same naming convention.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1288,7 +1282,7 @@ If you have a <code>.asc</code> file for your scanner, add it under <code>user_s
 <ul>
 <li>Username: Used to sign sequences you create. Can be a combination of your first and last name, for example. Will show up in the filename of all sequences you create. Please avoid special characters and white spaces. </li>
 <li>Lab: Will be stored in the backup information for all sequences you create. If your lab isn’t listed, select “Other” and enter your affiliation manually. </li>
-<li>Path to backup data: This is where all your backup data will be stored. Every time you write a sequence, a subfolder will be created here containing the .seq file needed to run the sequence on the scanner, as well as backup information necessary for reconstruction. If you want all OpenMRF related code and files to live in the same location, follow the recommendation from step 0 and choose the top-level <code>OpenMRF</code> directory. </li>
+<li>Path to backup data: This is where all your backup data will be stored. Every time you write a sequence, a subfolder will be created containing the .seq file needed to run the sequence on the scanner, as well as backup information necessary for reconstruction. If you want all OpenMRF related code and files to live in the same location, follow the recommendation from step 0 and choose the top-level <code>OpenMRF</code> directory. </li>
 <li>Default MRI scanner: the hardware limitations of this scanner will be used per default, unless you specify a different scanner in your code. </li>
 </ul>
 <div class="admonition info">
@@ -1298,21 +1292,38 @@ If you have a <code>.asc</code> file for your scanner, add it under <code>user_s
 <h2 id="4-take-a-look-around">4. Take a look around!</h2>
 <p>OpenMRF is a comprehensive framework with many different parts to it. For getting started, we strongly recommend taking a closer look at all the different examples in the <code>main_sequences</code> folder, and especially at the example MRF sequences in <code>main_sequences/fingerprinting</code>. In every subfolder, you will find code to compile the respective sequence (usually starts with <code>pulseq_....m</code>) as well as the corresponding code for reconstruction of the acquired raw data (usually starts with <code>reco_....m</code>). </p>
 <h2 id="5-compile-a-test-sequence">5. Compile a test sequence.</h2>
-<p>Navigate to <code>main_sequences/fingerprinting</code> and open <code>pulseq_mrf.m</code>. At the beginning of every sequence creation script, you will define five flags:</p>
+<p>Navigate to <code>main_sequences/fingerprinting</code> and open <code>pulseq_mrf.m</code>. At the beginning of every sequence creation script, you can define five flags (setting the flags is optional, if not set explicitly, they default to 0). </p>
 <ul>
-<li><code>flag_backup</code>: when set to 1, a <code>.seq</code> file and all corresponding backup files are saved in a subfolder in your specified backup path. When set to 0, nothing is saved. </li>
+<li><code>flag_backup</code>: When set to 0, nothing is saved. When set to 1, a <code>.seq</code> file and all corresponding backup files are saved in the <code>Pulseq_Workspace</code> subfolder. When set to 2, the .seq file is also copied to the <code>Seq_Export</code> folder (facilitates exporting of a larger number of .seq files). If either the <code>Pulseq_Workspace</code> or the <code>Seq_Export</code> folder do not yet exist, they will automatically be created in the backup location specified during the first execution of <code>install_OpenMRF.m</code>. Here's an overview of the resulting file tree:</li>
 </ul>
-<!-- !!! info "`flag_backup=2`;"
-    You may encounter comments indicating that setting `flag_backup=2` results in backing up and sending the `.seq` file. This functionality is specific to the Experimental Physics 5 group at the University of Würzburg and won't work outside of their network - please just ignore.  -->
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>OpenMRF/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>|-- openmrf-core-matlab/
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>|-- Pulseq_Workspace/
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    `-- username/                                           # set during the first run of install_OpenMRF.m
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        `-- yymmdd/                                         # today&#39;s date
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>            `-- yymmdd_hhmm/                                # timestamp created from current date and time
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>                |-- yymmdd_hhmm_username_seqname.seq        # .seq file to put on the scanner
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>                |-- backup_yymmdd_hhmm_username_seqname.m   # a copy of the matlab script used to create the .seq file
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>                |-- backup_yymmdd_hhmm_workspace.mat        # a copy of the matlab workspace
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>                |-- include_pulseq_toolbox.tar              # a copy of the include_pulseq_toolbox folder
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>                `-- md5_???.txt                             # md5 hash and other information in human-readable format
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>`-- Seq_Export/
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    `-- username/
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        `-- yymmdd_hhmm_username_seqname.seq                # same .seq file as in Pulseq_Workspace
+</span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Timestamps</p>
-<p>You can only create one sequence per minute with this flag active, otherwise the timestamps used in the naming convention would be ambiguous (more information <a href="../wiki/timestamps/">here</a>).</p>
+<p>If you're trying to compile more than one sequence per minute, you will receive the following warning: <code>Warning: pulseq duplicate detected! .seq writing stopped!</code> and nothing will be saved (otherwise the timestamps used in the naming convention would be ambiguous). </p>
 </div>
 <ul>
 <li><code>flag_report</code>: when set to 1, a timing check report will be printed to the command window. When set to 2, additional hardware checks will be performed (takes longer). </li>
 <li><code>flag_pns</code>: when set to 1, a PNS simulation will be performed. Only works if you have a correctly named <code>.asc</code> file in the correct file location (see <a href="#asc-info">here</a>). Per default, the PNS will be simulated for an axial slice. To change this default behavior, add a line 
-<div class="language-matlab highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">pns_orientation</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;coronal&#39;</span><span class="p">;</span>
-</span></code></pre></div></li>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">pns_orientation</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;coronal&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+for PNS in coronal slice orientation or 
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">pns_orientation</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;all&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+to show PNS in all major slice orientations. </li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">PNS Simulation</p>
@@ -1328,14 +1339,13 @@ If you have a <code>.asc</code> file for your scanner, add it under <code>user_s
 <p class="admonition-title">Danger</p>
 <p>Make sure you know what you're doing before you start running Pulseq sequences on your scanner. </p>
 </div>
-<div class="admonition tip">
-<p class="admonition-title"><code>Timing and Flip Angles</code> on Siemens scanners</p>
-<p>If you are using a Siemens system, make sure to set <code>Timing and Flip Angles</code> in the <code>Sequence/Special</code> tab to <code>strict</code>. Otherwise, all RF events might be rescaled if the peak RF voltage exceeds your scanner's limit. </p>
-</div>
+<!-- !!! tip "`Timing and Flip Angles` on Siemens scanners"
+    If you are using a Siemens system, make sure to set `Timing and Flip Angles` in the `Sequence/Special` tab to `strict`. Otherwise, all RF events might be rescaled if the peak RF voltage exceeds your scanner's limit.  -->
+
 <h2 id="7-reconstruct-the-data-and-create-parametric-maps">7. Reconstruct the data and create parametric maps.</h2>
-<p>In Matlab, navigate to <code>main_sequences/fingerprinting</code> and open <code>reco_mrf.m</code>. Change the variables <code>study_path</code> and <code>study_name_mrf</code> to point to your acquired data. For now, we are not correcting for trajectory imperfections, so delete or comment the line defining <code>study_name_traj</code> - in this case, the nominal trajectory will be used for reconstruction. After having updated the paths, run the file. Once the reconstruction is complete, a figure showing the final parametric maps should appear. </p>
+<p>In Matlab, navigate to <code>main_sequences/fingerprinting</code> and open <code>reco_mrf.m</code>. Set <code>vendor</code> to the make of the MRI machine you used for data acquisition (capitalized), and let <code>path_raw_mrf</code> point to the rawdata file. For now, we are not correcting for trajectory imperfections, so delete or comment the line defining <code>path_raw_traj</code> - in this case, the nominal trajectory will be used for reconstruction (more information on trajectory calibration <a href="../wiki/trajectory/">here</a>). After having updated the paths, run the file. Once the reconstruction is complete, a figure showing the final parametric maps should appear, as well as a pop-up window asking where to save the results. </p>
 <h2 id="8-your-feedback-matters">8. Your feedback matters!</h2>
-<p>Please help us improve OpenMRF. If you encounter any bugs, issues, or limitations - send us an <a href="mailto:maximilian.gram@uni-wuerzburg.de,tomgr@umich.edu">email</a> or create an issue on the <a href="https://github.com/OpenMRF/openmrf-core-matlab/issues">github page</a>! </p>
+<p>Please help us improve OpenMRF. If you encounter any bugs, issues, or limitations - send us an <a href="mailto:maximilian.gram@uni-wuerzburg.de,tomgr@med.umich.edu">email</a> or create an issue on the <a href="https://github.com/OpenMRF/openmrf-core-matlab/issues">github page</a>! </p>
 
 
 
@@ -1358,7 +1368,7 @@ If you have a <code>.asc</code> file for your scanner, add it under <code>user_s
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 24, 2026 20:06:52 UTC">March 24, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 25, 2026 21:35:05 UTC">March 25, 2026</span>
   </span>
 
     
