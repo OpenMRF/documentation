@@ -14,7 +14,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../custom_trajectories/">
+        <link rel="next" href="../dictionary_generation/">
       
       
         
@@ -76,6 +76,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#cardiac-triggering" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -486,8 +491,6 @@
       
         
       
-        
-      
     
     
     
@@ -558,6 +561,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cardiac Triggering
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -576,34 +599,58 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../custom_trajectories/" class="md-nav__link">
         
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  <span class="md-ellipsis">
+  
     
   
-    Custom Trajectories
   
-
-    
-  </span>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-timing-adjustments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Timing Adjustments
+      
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger-and-soft-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger and Soft Delay
+      
+    </span>
+  </a>
   
-
-      </a>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patient-specific-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patient-Specific Dictionaries
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -644,62 +691,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../mlev_params/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MLEV Parameters
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../modules/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Modules
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../noise_prewhitening/" class="md-nav__link">
         
   
@@ -708,6 +699,62 @@
     
   
     Noise Prewhitening
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preparation_modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparation Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../readout_modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Readout Modules
   
 
     
@@ -965,6 +1012,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-timing-adjustments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Timing Adjustments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger-and-soft-delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger and Soft Delay
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patient-specific-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patient-Specific Dictionaries
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -984,17 +1074,106 @@
   
 
 
-  <h1>Cardiac Triggering</h1>
-
-<p>To enable myocardial T1 and T2 mapping with MRF, the acquisition is typically split into multiple acquisition windows<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Ideally, these acquisition windows are placed in the exact same cardiac phase so that the resulting parametric maps don't show any motion corruption. In order to allow the flexible placement of the acquisition window depending on the subject's heart rate, we are using Pulseq's new soft delay feature. </p>
-<div class="footnote">
+<h1 id="cardiac-triggering">Cardiac Triggering</h1>
+<p>Cardiac triggering is used for cMRF sequences. You can find the trigger parameters and timing settings in the following Matlab sections.</p>
 <hr />
-<ol>
-<li id="fn:1">
-<p>Hamilton JI, Jiang Y, Chen Y, Ma D, Lo WC, Griswold M, Seiberlich N. MR fingerprinting for rapid quantification of myocardial T1 , T2 , and proton spin density. Magn Reson Med. 2017 Apr;77(4):1446-1458. doi: 10.1002/mrm.26216.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
+<h3 id="general-timing-adjustments">General Timing Adjustments</h3>
+<p>Since MRF sequences typically use multiple preparations with different durations, OpenMRF automatically calculates filling delays for each segment using the <code>MRF_adjust_segment_delays()</code> function. These delays are stored in <code>MRF.delay_dynamic</code>.</p>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">% adjust dynamic segment delays</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">MRF_adjust_segment_delays</span><span class="p">();</span>
+</span></code></pre></div>
+<hr />
+<h3 id="trigger-and-soft-delay">Trigger and Soft Delay</h3>
+<p>If <code>MRF.mode_trig</code> is enabled, the trigger object <code>TRIG_IN</code> is calculated and added to the beginning of every MRF segment. Note that the trigger must also be activated on the scanner. For Siemens systems, this can be done in the physio menu.</p>
+<p>Another important concept is the soft delay. For cardiac scans, we typically want to shift the acquisition window to diastole. <code>MRF.delay_soft</code> defines a variable delay object within the Pulseq framework, which can be modified via the scanner GUI.</p>
+<p>To ensure that the acquisition is completed before the next R-wave, enter the end of your desired acquisition window in the GUI, including a safety buffer. OpenMRF then automatically calculates <code>MRF.delay_soft</code> to match the desired timing.</p>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c">% Trigger Mode</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c">% on:  Cardiac</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c">% off: Abdominal or Phantom</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">MRF</span><span class="p">.</span><span class="n">mode_trig</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;on&#39;</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c">% calc fixed segment timings</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">MRF</span><span class="p">.</span><span class="n">acq_duration</span><span class="w">      </span><span class="p">=</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">SPI</span><span class="p">.</span><span class="n">TR</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">MRF</span><span class="p">.</span><span class="n">nr</span><span class="p">));</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">MRF</span><span class="p">.</span><span class="n">prep_acq_duration</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF</span><span class="p">.</span><span class="n">prep_max</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MRF</span><span class="p">.</span><span class="n">acq_duration</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">if</span><span class="w"> </span><span class="nb">strcmp</span><span class="p">(</span><span class="n">MRF</span><span class="p">.</span><span class="n">mode_trig</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;on&#39;</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="n">MRF</span><span class="p">.</span><span class="n">delay_soft</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">mr</span><span class="p">.</span><span class="n">makeSoftDelay</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;acq_end&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;offset&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">MRF</span><span class="p">.</span><span class="n">prep_acq_duration</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;factor&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% block_duration [s] = offset [s] + input [s] / factor</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="n">TRIG_IN</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">mr</span><span class="p">.</span><span class="n">makeTrigger</span><span class="p">(</span><span class="s">&#39;physio1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;system&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">system</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;delay&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10e-6</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;duration&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10e-3</span><span class="p">);</span><span class="w"> </span><span class="c">% Input Trigger</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="k">else</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="n">MRF</span><span class="p">.</span><span class="n">seg_duration</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">*</span><span class="mf">1e-3</span><span class="p">;</span><span class="w"> </span><span class="c">% [s] adjust segment duration</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="n">MRF</span><span class="p">.</span><span class="n">delay_soft</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">mr</span><span class="p">.</span><span class="n">makeDelay</span><span class="p">(</span><span class="w"> </span><span class="nb">round</span><span class="p">((</span><span class="n">MRF</span><span class="p">.</span><span class="n">seg_duration</span><span class="o">-</span><span class="n">MRF</span><span class="p">.</span><span class="n">prep_acq_duration</span><span class="p">)</span><span class="o">/</span><span class="nb">system</span><span class="p">.</span><span class="n">gradRasterTime</span><span class="p">)</span><span class="o">*</span><span class="nb">system</span><span class="p">.</span><span class="n">gradRasterTime</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c">% fixed delay</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="k">end</span>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><strong>Goal:</strong> diastolic acquisition window:</p>
+<ul>
+<li>Average RR interval: 1000 ms  </li>
+<li>Acquisition duration: 250 ms (<code>MRF.acq_duration</code>)  </li>
+<li>Longest preparation: 350 ms (<code>MRF.prep_max</code>)  </li>
+<li>Total duration: 600 ms (<code>MRF.prep_acq_duration</code>)  </li>
+</ul>
+<p>To account for RR variations, you enter 900 ms in the GUI.<br />
+This results in a final delay of:<br />
+<strong>900 ms − 600 ms = 300 ms</strong></p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If a patient’s RR interval is too short, the soft delay will be clipped to zero. This may lead to acquisition in the wrong cardiac phase and can cause missed triggers. Always verify sequence timing before in vivo scans and include a sufficient safety buffer.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If <code>MRF.mode_trig</code> is disabled, the sequence can be used for phantom validation or abdominal imaging. In this case, the user defines a fixed segment duration (<code>MRF.seg_duration</code>, e.g. 1 s), and <code>MRF.delay_soft</code> becomes a conventional fixed delay.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For some MRF sequences, it may be useful to have zero delays between all segments. This can be achieved by disabling the trigger and overwriting all dynamic and soft delays:
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">MRF</span><span class="p">.</span><span class="n">mode_trig</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;off&#39;</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">for</span><span class="w"> </span><span class="n">ii</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">MRF</span><span class="p">.</span><span class="n">n_segm</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">MRF</span><span class="p">.</span><span class="n">delay_dynamic</span><span class="p">(</span><span class="n">ii</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">mr</span><span class="p">.</span><span class="n">makeDelay</span><span class="p">(</span><span class="mf">1e-5</span><span class="p">);</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">end</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">MRF</span><span class="p">.</span><span class="n">delay_soft</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">mr</span><span class="p">.</span><span class="n">makeDelay</span><span class="p">(</span><span class="mf">1e-5</span><span class="p">);</span><span class="w"> </span><span class="c">% minimize delays</span>
+</span></code></pre></div></p>
+</div>
+<hr />
+<h3 id="patient-specific-dictionaries">Patient-Specific Dictionaries</h3>
+<p>OpenMRF calculates the dictionary directly from the <code>.seq</code> file. However, the <code>.seq</code> file does not contain:</p>
+<ul>
+<li>the user-defined soft delay from the scanner GUI  </li>
+<li>patient-specific trigger waiting times  </li>
+</ul>
+<p>Therefore, a patient-specific dictionary must be calculated. The soft delay and trigger information must be passed to the dictionary simulation.</p>
+<ul>
+<li>The <strong>soft delay must be recorded manually</strong> by the user  </li>
+<li>The <strong>trigger waiting times</strong> can be derived from ADC timestamps  </li>
+</ul>
+<p>This is handled in the <code>mrf_reco()</code> pipeline via <code>MRF_read_seq_file()</code>:</p>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">[</span><span class="o">~</span><span class="p">,</span><span class="w"> </span><span class="n">SIM</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_read_seq_file</span><span class="p">(</span><span class="w"> </span><span class="n">params_dict</span><span class="p">.</span><span class="n">seq_path</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">                              </span><span class="n">params_dict</span><span class="p">.</span><span class="n">f0</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">                              </span><span class="n">params_dict</span><span class="p">.</span><span class="n">time_stamps</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c">  % adc time stamps; used for correction of trigger delays</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">                              </span><span class="n">params_dict</span><span class="p">.</span><span class="n">soft_delays</span><span class="p">,</span><span class="k">...</span><span class="c">   % soft delay input; used for correction of sequence timings</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">                              </span><span class="n">params_dict</span><span class="p">.</span><span class="n">flag_kz</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">                              </span><span class="n">params_dict</span><span class="p">.</span><span class="n">echo_mode</span><span class="p">,</span><span class="w"> </span><span class="k">...</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">                              </span><span class="n">PULSEQ</span><span class="p">.</span><span class="n">SPI</span><span class="p">.</span><span class="n">adcNPad</span><span class="p">,</span><span class="k">...</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">                              </span><span class="n">PULSEQ</span><span class="p">.</span><span class="n">SPI</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">dwell</span><span class="p">,</span><span class="k">...</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">                              </span><span class="mf">1e-6</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c"> </span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">                              </span><span class="mi">0</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Please refer to the example reconstruction script<br />
+<code>main_sequences/fingerprinting/reco_mrf.m</code><br />
+and enter the soft delay in the following section:</p>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c">%% parameters: dictionary simulation</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">seq_path</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">sim_mode</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;BLOCH&#39;</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">comp_energy</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.9999</span><span class="p">;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">N_iso</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">s_fac</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">f0</span><span class="w">          </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">time_stamps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">study_info</span><span class="p">.</span><span class="n">time_stamps</span><span class="p">;</span><span class="w">  </span><span class="c">% adc time stamps: required for correction of trigger delays in cMRF</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">soft_delays</span><span class="w"> </span><span class="p">=</span><span class="w"> </span>???<span class="p">;</span><span class="w">                     </span><span class="c">% soft delay user input: required for correction of the acquisition window in cMRF</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">flag_kz</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">echo_mode</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span>
+</span></code></pre></div>
 
 
 
@@ -1017,7 +1196,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 21, 2026 17:39:13 UTC">March 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 25, 2026 21:43:22 UTC">March 25, 2026</span>
   </span>
 
     
