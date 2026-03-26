@@ -635,8 +635,6 @@
       
         
       
-        
-      
     
     
     
@@ -754,6 +752,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../wiki/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../wiki/noise_prewhitening/" class="md-nav__link">
         
   
@@ -838,70 +864,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../wiki/scanner/" class="md-nav__link">
+      <a href="../wiki/single_parameter_mapping/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Scanner selection
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wiki/spiral_mapping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Spiral Single Parameter Mapping
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wiki/timestamps/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Timestamps
+    Single Parameter Mapping
   
 
     
@@ -1257,7 +1227,7 @@ If you have a <code>.asc</code> file for your scanner, add it under <code>user_s
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Scanner selection</p>
-<p>Every time you compile a sequence, the currently selected scanner specifications will be printed to the terminal. If the variable <code>pulseq_scanner</code> is not specified before <code>pulseq_init</code> in your sequence creation script, your default scanner will be automatically selected. More information <a href="../wiki/scanner/">here</a>.</p>
+<p>Every time you compile a sequence, the currently selected scanner specifications will be printed to the terminal. If the variable <code>pulseq_scanner</code> is not specified before <code>pulseq_init</code> in your sequence creation script, your default scanner will be automatically selected. More information <a href="wiki/scanner.md">here</a>.</p>
 </div>
 <h2 id="4-take-a-look-around">4. Take a look around!</h2>
 <p>OpenMRF is a comprehensive framework with many different parts to it. For getting started, we strongly recommend taking a closer look at all the different examples in the <code>main_sequences</code> folder, and especially at the example MRF sequences in <code>main_sequences/fingerprinting</code>. In every subfolder, you will find code to compile the respective sequence (usually starts with <code>pulseq_....m</code>) as well as the corresponding code for reconstruction of the acquired raw data (usually starts with <code>reco_....m</code>). </p>

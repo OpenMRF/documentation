@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://openmrf.org/wiki/trajectory/">
       
       
-        <link rel="prev" href="../timestamps/">
+        <link rel="prev" href="../single_parameter_mapping/">
       
       
         <link rel="next" href="../../troubleshoot/">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-mrf-sequence-creation" class="md-skip">
+        <a href="#1-generate-mrf-sequence" class="md-skip">
           Skip to content
         </a>
       
@@ -489,8 +489,6 @@
       
         
       
-        
-      
     
     
     
@@ -611,6 +609,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../noise_prewhitening/" class="md-nav__link">
         
   
@@ -695,70 +721,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../scanner/" class="md-nav__link">
+      <a href="../single_parameter_mapping/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Scanner selection
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../spiral_mapping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Spiral Single Parameter Mapping
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../timestamps/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Timestamps
+    Single Parameter Mapping
   
 
     
@@ -835,10 +805,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-mrf-sequence-creation" class="md-nav__link">
+  <a href="#1-generate-mrf-sequence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. MRF sequence creation.
+        1. Generate MRF Sequence
       
     </span>
   </a>
@@ -846,10 +816,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-trajectory-calibration-sequence-creation" class="md-nav__link">
+  <a href="#2-generate-trajectory-calibration-sequence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Trajectory calibration sequence creation.
+        2. Generate Trajectory Calibration Sequence
       
     </span>
   </a>
@@ -857,10 +827,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-measurement" class="md-nav__link">
+  <a href="#calibration-method" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Measurement
+        Calibration Method
       
     </span>
   </a>
@@ -868,10 +838,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-reconstruction-standalone-optional" class="md-nav__link">
+  <a href="#sequence-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Reconstruction - standalone (optional)
+        Sequence Parameters
       
     </span>
   </a>
@@ -879,10 +849,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-use-in-mrf-reconstruction" class="md-nav__link">
+  <a href="#3-trajectory-measurement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Use in MRF reconstruction
+        3. Trajectory Measurement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-use-measured-trajectories-for-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Use Measured Trajectories for Reconstruction
       
     </span>
   </a>
@@ -1038,10 +1019,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-mrf-sequence-creation" class="md-nav__link">
+  <a href="#1-generate-mrf-sequence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. MRF sequence creation.
+        1. Generate MRF Sequence
       
     </span>
   </a>
@@ -1049,10 +1030,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-trajectory-calibration-sequence-creation" class="md-nav__link">
+  <a href="#2-generate-trajectory-calibration-sequence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Trajectory calibration sequence creation.
+        2. Generate Trajectory Calibration Sequence
       
     </span>
   </a>
@@ -1060,10 +1041,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-measurement" class="md-nav__link">
+  <a href="#calibration-method" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Measurement
+        Calibration Method
       
     </span>
   </a>
@@ -1071,10 +1052,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-reconstruction-standalone-optional" class="md-nav__link">
+  <a href="#sequence-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Reconstruction - standalone (optional)
+        Sequence Parameters
       
     </span>
   </a>
@@ -1082,10 +1063,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-use-in-mrf-reconstruction" class="md-nav__link">
+  <a href="#3-trajectory-measurement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Use in MRF reconstruction
+        3. Trajectory Measurement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-use-measured-trajectories-for-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Use Measured Trajectories for Reconstruction
       
     </span>
   </a>
@@ -1114,18 +1106,110 @@
 
   <h1>Trajectory Calibration</h1>
 
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Site under construction</p>
+<p>OpenMRF provides a dedicated workflow for accurate k-space trajectory measurement. This is particularly important when using demanding gradient waveforms (e.g., spiral or rosette), where system imperfections can lead to trajectory deviations.</p>
+<p>Below, the full workflow is described step-by-step.</p>
+<hr />
+<h3 id="1-generate-mrf-sequence">1. Generate MRF Sequence</h3>
+<p>Compile the MRF sequence that you plan to use for data acquisition.</p>
+<p>Make sure that:
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">flag_backup</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p>This ensures that a Pulseq workspace backup file (<code>.mat</code>) is generated. This file contains the reference k-space trajectory required for calibration.</p>
+<hr />
+<h3 id="2-generate-trajectory-calibration-sequence">2. Generate Trajectory Calibration Sequence</h3>
+<p>Open:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>main_sequences/calibrate_trajectories/pulseq_traj_meas.m
+</span></code></pre></div></p>
+<p>In the second section, update the path to the Pulseq workspace backup file of your MRF sequence:</p>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c">%% import SPI object for trajectory measurement</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c">% load any backup file containing an SPI object</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">load</span><span class="p">(</span><span class="s">&#39;OpenMRF/Pulseq_Workspace/user/YYMMDD/YYMMDD_HHMM/backup_YYMMDD_HHMM_workspace.mat&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h3 id="calibration-method">Calibration Method</h3>
+<p>OpenMRF supports two established approaches for trajectory measurement:</p>
+<ul>
+<li>
+<p><strong>Duyn et al. (1998)</strong><br />
+  Uses a single thin slice with an offset and measures phase evolution per gradient axis.<br />
+<a href="https://doi.org/10.1006/jmre.1998.1396">doi: 10.1006/jmre.1998.1396</a>  </p>
+</li>
+<li>
+<p><strong>Robison et al. (2019)</strong> <em>(default)</em><br />
+  Uses two slices with positive and negative offsets and measures both gradient polarities.<br />
+  This allows correction of both B0 offsets and eddy current effects.<br />
+<a href="https://doi.org/10.1002/mrm.27583">doi: 10.1002/mrm.27583</a>  </p>
+</li>
+</ul>
+<p>By default, OpenMRF uses the <strong>Robison method</strong>.</p>
+<hr />
+<h3 id="sequence-parameters">Sequence Parameters</h3>
+<p>You can define the parameters of the calibration sequence as follows:</p>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c">%% sequence objects for trajectory measurement</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c">% select method</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c">% duyn:    10.1006/jmre.1998.1396</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c">% robison: 10.1002/mrm.27583</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">TRAJ</span><span class="p">.</span><span class="n">method</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;robison&#39;</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c">% number of repetitions for averaging</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">TRAJ</span><span class="p">.</span><span class="n">Nav</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c">% number of dummy scans</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">TRAJ</span><span class="p">.</span><span class="n">Ndummy</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c">% recovery time between repetitions</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="n">TRAJ</span><span class="p">.</span><span class="n">Trec</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">150</span><span class="w"> </span><span class="o">*</span><span class="mf">1e-3</span><span class="p">;</span><span class="w"> </span><span class="c">% [s]</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="c">% analyze phase evolution in a thin slice far from the iso-center</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="n">TRAJ</span><span class="p">.</span><span class="n">slice_thickness</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="mf">1e-3</span><span class="p">;</span><span class="w">  </span><span class="c">% [m] slice thickness</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="n">TRAJ</span><span class="p">.</span><span class="n">slice_offset</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="o">*</span><span class="mf">1e-3</span><span class="p">;</span><span class="w"> </span><span class="c">% [m] slice offset</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="c">% flip angle</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="n">TRAJ</span><span class="p">.</span><span class="n">exc_fa</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="c">% reduce stimulation</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="n">TRAJ</span><span class="p">.</span><span class="n">lim_slew</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="c">% init seq objects for trajectory scans</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="p">[</span><span class="n">TRAJ</span><span class="p">,</span><span class="w"> </span><span class="n">FOV</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">TRAJ_init</span><span class="p">(</span><span class="n">TRAJ</span><span class="p">,</span><span class="w"> </span><span class="n">PULSEQ</span><span class="p">.</span><span class="n">PULSEQ_SPI</span><span class="p">.</span><span class="n">SPI</span><span class="p">,</span><span class="w"> </span><span class="nb">system</span><span class="p">);</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A typical spiral calibration with 48 projections takes approximately <strong>7 minutes</strong>.<br />
+More complex trajectories (e.g., rosette) may require significantly longer scan times due to:</p>
+<ul>
+<li>a higher number of unique projections  </li>
+<li>longer waveform durations  </li>
+</ul>
+<p>If scan time or system storage becomes limiting, consider splitting the calibration into multiple scans.</p>
 </div>
-<p>OpenMRF offers the option to calibrate your trajectory. This feature is especially relevant if you're using demanding gradient operations at higher field strengths. In the following, we'll outline the process in five easy steps. </p>
-<h3 id="1-mrf-sequence-creation">1. MRF sequence creation.</h3>
-<p>Compile any MRF sequence that you want to use for data acquisition. Make sure <code>flag_backup</code> is set to 1. </p>
-<h3 id="2-trajectory-calibration-sequence-creation">2. Trajectory calibration sequence creation.</h3>
-<p>Open <code>main_sequences/calibrate_trajectories/pulseq_traj_meas.m</code>. In the second cell, change the path of the SPI object to be loaded to the backup <code>.mat</code> file corresponding to the MRF sequence in question. </p>
-<h3 id="3-measurement">3. Measurement</h3>
-<h3 id="4-reconstruction-standalone-optional">4. Reconstruction - standalone (optional)</h3>
-<h3 id="5-use-in-mrf-reconstruction">5. Use in MRF reconstruction</h3>
+<hr />
+<h3 id="3-trajectory-measurement">3. Trajectory Measurement</h3>
+<p>We recommend performing trajectory calibration immediately after the MRF scan using a <strong>spherical calibration phantom</strong>.</p>
+<ul>
+<li>Place the phantom exactly at the <strong>isocenter</strong></li>
+<li>Copy the <strong>slice orientation</strong> from the MRF protocol  </li>
+<li><strong>Do NOT copy the slice offset</strong> (must remain at isocenter)</li>
+<li>Ensure at least <strong>50 mm distance</strong> in all directions for reliable phase evolution measurements</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Only the slice rotation must match the MRF sequence.<br />
+The calibration sequence uses internally defined slice offsets.</p>
+</div>
+<hr />
+<h3 id="4-use-measured-trajectories-for-reconstruction">4. Use Measured Trajectories for Reconstruction</h3>
+<p>Use the example reconstruction script:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>main_sequences/fingerprinting/reco_mrf.m
+</span></code></pre></div>
+<p>In the first section of the script, define the path to the calibration raw data:</p>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">path_raw_traj</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;...&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+<p>The trajectory processing is performed automatically via:</p>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">TRAJ_reco</span><span class="p">();</span>
+</span></code></pre></div>
+<p>The reconstructed trajectories are then used for MRF reconstruction.</p>
 
 
 
@@ -1148,7 +1232,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 21, 2026 17:39:13 UTC">March 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 26, 2026 05:24:03 UTC">March 26, 2026</span>
   </span>
 
     

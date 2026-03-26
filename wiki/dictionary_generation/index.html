@@ -14,7 +14,7 @@
         <link rel="prev" href="../cardiac_triggering/">
       
       
-        <link rel="next" href="../noise_prewhitening/">
+        <link rel="next" href="../hardware/">
       
       
         
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#simulation-modes" class="md-skip">
+        <a href="#dictionary-calculation" class="md-skip">
           Skip to content
         </a>
       
@@ -489,8 +489,6 @@
       
         
       
-        
-      
     
     
     
@@ -589,6 +587,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -631,6 +631,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -639,10 +641,176 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#simulation-modes" class="md-nav__link">
+  <a href="#1-global-parameters-for-dictionary-simulation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simulation modes
+        1. Global Parameters for Dictionary Simulation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Global Parameters for Dictionary Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params_dictseq_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.seq_path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictsim_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.sim_mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictcomp_energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.comp_energy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictn_iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.N_iso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dicts_fac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.s_fac
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictf0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.f0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dicttime_stamps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.time_stamps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictsoft_delays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.soft_delays
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictflag_kz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.flag_kz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictecho_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.echo_mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-define-the-look-up-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Define the Look-Up Table
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Define the Look-Up Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range Definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-b1-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. B1+ Correction
       
     </span>
   </a>
@@ -650,24 +818,91 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compression-energy" class="md-nav__link">
+  <a href="#4-a-look-under-the-hood" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Compression Energy
+        4. A Look Under the Hood
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. A Look Under the Hood">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-seq-file-to-sim-struct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From .seq File to SIM Struct
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#b1-correction" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#pre-simulations-before-dictionary-generation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        B1+ Correction
+        Pre-Simulations Before Dictionary Generation
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Pre-Simulations Before Dictionary Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slice-profile-pre-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slice Profile Pre-Simulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-matrices-for-adiabatic-pulses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transition Matrices for Adiabatic Pulses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adiabatic-spin-lock-and-additional-sequence-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adiabatic Spin-Lock and Additional Sequence Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -675,6 +910,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -771,70 +1034,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../scanner/" class="md-nav__link">
+      <a href="../single_parameter_mapping/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Scanner selection
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../spiral_mapping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Spiral Single Parameter Mapping
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../timestamps/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Timestamps
+    Single Parameter Mapping
   
 
     
@@ -1008,6 +1215,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1016,10 +1225,176 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#simulation-modes" class="md-nav__link">
+  <a href="#1-global-parameters-for-dictionary-simulation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simulation modes
+        1. Global Parameters for Dictionary Simulation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Global Parameters for Dictionary Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#params_dictseq_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.seq_path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictsim_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.sim_mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictcomp_energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.comp_energy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictn_iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.N_iso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dicts_fac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.s_fac
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictf0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.f0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dicttime_stamps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.time_stamps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictsoft_delays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.soft_delays
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictflag_kz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.flag_kz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#params_dictecho_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        params_dict.echo_mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-define-the-look-up-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Define the Look-Up Table
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Define the Look-Up Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range Definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-b1-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. B1+ Correction
       
     </span>
   </a>
@@ -1027,24 +1402,91 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compression-energy" class="md-nav__link">
+  <a href="#4-a-look-under-the-hood" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Compression Energy
+        4. A Look Under the Hood
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. A Look Under the Hood">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-seq-file-to-sim-struct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From .seq File to SIM Struct
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#b1-correction" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#pre-simulations-before-dictionary-generation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        B1+ Correction
+        Pre-Simulations Before Dictionary Generation
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Pre-Simulations Before Dictionary Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slice-profile-pre-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slice Profile Pre-Simulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-matrices-for-adiabatic-pulses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transition Matrices for Adiabatic Pulses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adiabatic-spin-lock-and-additional-sequence-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adiabatic Spin-Lock and Additional Sequence Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1068,90 +1510,190 @@
   
 
 
-  <h1>Dictionary Generation</h1>
-
-<p>The dictionary used in the creation of parametric maps from acquired data is calculated based on the used .seq file. This ensures that the dictionary accurately reflects the events played out in the acquisition without requiring additional user input. </p>
-<h3 id="simulation-modes">Simulation modes</h3>
-<p>The user can decide between two versions of dictionary creation: <code>'BLOCH'</code> and <code>'EPG'</code>. EPG is an efficient implementation without corrections for slice profile etc. and is recommended only for fast reconstructions/sanity checks, when accuracy is not the primary objective. In most cases, it is recommended to set <code>sim_mode</code> to <code>'BLOCH'</code></p>
+<h1 id="dictionary-calculation">Dictionary Calculation</h1>
+<p>OpenMRF calculates the MRF dictionary directly from the used <code>.seq</code> file. This is one of the central design concepts of the framework: the simulator does not rely on a manually reimplemented sequence model, but instead parses the actual Pulseq sequence file and simulates exactly the events that are played out during the acquisition.</p>
+<p>This ensures a highly general and flexible approach to dictionary creation. New MRF sequences can therefore be implemented and tested without the need to develop a dedicated simulator for each sequence variant.</p>
+<hr />
+<h2 id="1-global-parameters-for-dictionary-simulation">1. Global Parameters for Dictionary Simulation</h2>
+<p>The main settings for dictionary generation are defined in the example reconstruction script:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>main_sequences/fingerprinting/reco_mrf.m
+</span></code></pre></div>
+<p>The following section controls the global dictionary simulation settings:</p>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c">%% parameters: dictionary simulation</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">seq_path</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span><span class="w">       </span><span class="c">% full path of .seq file; [] for automatic search in user backups</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">sim_mode</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;BLOCH&#39;</span><span class="p">;</span><span class="w">  </span><span class="c">% &#39;BLOCH&#39; or &#39;EPG&#39;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">comp_energy</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.9999</span><span class="p">;</span><span class="w">   </span><span class="c">% svd compression energy: 0 for uncompressed dictionary</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">N_iso</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">     </span><span class="c">% number of isochromats for bloch simulation</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">s_fac</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">        </span><span class="c">% factor for out-of-slice simulation</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">f0</span><span class="w">          </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span><span class="w">       </span><span class="c">% larmor frequency f0: required to simulate rf pulses with ppm freq offsets</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">time_stamps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">study_info</span><span class="p">.</span><span class="n">time_stamps</span><span class="p">;</span><span class="w"> </span><span class="c">% adc times stamps: required for correction of trigger delays in cMRF</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">soft_delays</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span><span class="w">       </span><span class="c">% soft delay user input: required for correction of the acq window in cMRF</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">flag_kz</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span><span class="w">       </span><span class="c">% find kz partitions for stacked 3D MRF -&gt; eliminate unnecessary partitions</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">echo_mode</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span><span class="w">       </span><span class="c">% echo mode; default: &#39;spiral_out&#39;</span>
+</span></code></pre></div>
+<h3 id="params_dictseq_path"><code>params_dict.seq_path</code></h3>
+<p>Defines the full path to the <code>.seq</code> file. If set to <code>[]</code>, OpenMRF automatically searches for the sequence in the user backup folders.</p>
+<h3 id="params_dictsim_mode"><code>params_dict.sim_mode</code></h3>
+<p>Defines the simulation mode:
+- <code>'BLOCH'</code>: full Bloch simulation (default)
+- <code>'EPG'</code>: faster EPG-based simulation</p>
+<p>The <code>'BLOCH'</code> mode is the recommended default, as it accurately models slice profile effects and supports additional physical processes such as T2ρ relaxation, which are not supported by the EPG framework.  </p>
+<p>The <code>'EPG'</code> mode can be useful for simple sequences or quick sanity checks, but it does not account for several important effects. For more complex sequences—especially cardiac MRF—we strongly recommend using the <code>'BLOCH'</code> simulation.</p>
+<h3 id="params_dictcomp_energy"><code>params_dict.comp_energy</code></h3>
+<p>Defines the SVD compression energy of the dictionary. The default value <code>0.9999</code> retains 99.99% of the temporal signal energy. If set to <code>0</code>, the dictionary is kept uncompressed.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Once calculated, MRF dictionaries are stored in a compressed form under <code>include_pre_sim_library/compressed_dictionaries</code>. Whenever you are running an MRF reconstruction, the dictionary creation function will first check whether this exact same dictionary has been created before. If it has, it will be loaded, which substantially accelerates the reconstruction process. </p>
+<p>OpenMRF stores precomputed dictionaries in compressed form under <code>include_pre_sim_library/compressed_dictionaries</code>. Whenever a reconstruction is started, OpenMRF first checks whether an identical dictionary has already been calculated. If so, the dictionary is loaded directly, which can substantially accelerate the reconstruction.</p>
 </div>
-<h3 id="compression-energy">Compression Energy</h3>
-<p>For more efficient computations, the dictionary will be compressed onto a temporal subspace<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. The parameter <code>comp_energy</code> defines the level of compression - the default value of 0.9999 retains 99.99% of the dictionary's energy. </p>
-<h3 id="b1-correction">B1+ Correction</h3>
-<p>Especially at field strengths of 3T and higher, we recommend including B1+ deviations as an additional parameter. This will increase the size of the dictionary and slow down computations but ensure more accurate results. The B1+ range can be fairly coarse, as seen in the example below (using the <code>'BLOCH'</code> simulator). </p>
-<div class="admonition warning">
-<p class="admonition-title">Confounding effects of B1+ and T2</p>
-<p>When using MRF sequences that do not feature T2 preparations, the effects of T2 relaxation and B1+ inhomogeneities can not reliably be separated - in this case, do not include B1+ as an additional dictionary parameter. Generally, we recommend using sequences that are interleaved with multiple inversions and T2 preparations.  </p>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Dictionary creation without B1+ correction</label><label for="__tabbed_1_2">Dictionary creation with B1+ correction</label></div>
+<h3 id="params_dictn_iso"><code>params_dict.N_iso</code></h3>
+<p>Defines the number of isochromats used for Bloch simulation. This parameter is relevant only for <code>'BLOCH'</code> mode.</p>
+<h3 id="params_dicts_fac"><code>params_dict.s_fac</code></h3>
+<p>Defines the factor for out-of-slice simulation. This is used to model the effect of magnetization outside the nominal slice profile.</p>
+<h3 id="params_dictf0"><code>params_dict.f0</code></h3>
+<p>Defines the Larmor frequency <code>f0</code>. This parameter is required if the simulation should include RF pulses with ppm frequency offsets, for example in CEST-related applications.</p>
+<h3 id="params_dicttime_stamps"><code>params_dict.time_stamps</code></h3>
+<p>ADC time stamps from the measurement. These are required for correction of trigger delays in cardiac MRF.</p>
+<h3 id="params_dictsoft_delays"><code>params_dict.soft_delays</code></h3>
+<p>Stores the user-entered soft delay values. These are required for accurate modeling of the acquisition window in cardiac MRF.</p>
+<h3 id="params_dictflag_kz"><code>params_dict.flag_kz</code></h3>
+<p>Optional flag used for stacked 3D MRF. It allows OpenMRF to identify kz partitions and eliminate unnecessary partitions during dictionary generation.</p>
+<h3 id="params_dictecho_mode"><code>params_dict.echo_mode</code></h3>
+<p>Defines the echo mode. If left empty, the default mode is <code>'spiral_out'</code>.</p>
+<hr />
+<h2 id="2-define-the-look-up-table">2. Define the Look-Up Table</h2>
+<p>In a second step, the parameter ranges of the dictionary are defined. This is done in the same reconstruction script by creating a look-up table.</p>
+<p>The following examples illustrate common configurations.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">T1 + T2</label><label for="__tabbed_1_2">T1 + T2 + T1ρ</label><label for="__tabbed_1_3">T1 + T2 + B1+ correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-matlab highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">sim_mode</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;BLOCH&#39;</span><span class="p">;</span><span class="w"> </span><span class="c">% &#39;BLOCH&#39; or &#39;EPG&#39;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">comp_energy</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.9999</span><span class="p">;</span><span class="w">  </span><span class="c">% 0 for uncompressed dictionary</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">softDelay</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span><span class="w"> </span><span class="c">% only for cMRF -&gt; twix_obj.hdr.Meas.adFree(7...) * 1e-3</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">.</span><span class="n">range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span><span class="w">  </span><span class="mi">4</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">.</span><span class="n">factor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.025</span><span class="p">;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">.</span><span class="n">range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">.</span><span class="n">factor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.025</span><span class="p">;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_get_param_dict</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;T2&lt;T1&#39;</span><span class="p">});</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">look_up</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">];</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">look_up_names</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;T1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;T2&#39;</span><span class="p">};</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">[</span><span class="n">SEQ</span><span class="p">,</span><span class="w"> </span><span class="n">SIM</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_read_seq_file</span><span class="p">(</span><span class="w"> </span><span class="n">seq_path</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c">                     % path of the original .seq file which was measured</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">                            </span><span class="n">twix_obj</span><span class="p">.</span><span class="n">hdr</span><span class="p">.</span><span class="n">Meas</span><span class="p">.</span><span class="n">lFrequency</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c">     % f0; used for actual frequency offsets in fat suppression, CEST or WASABI modules</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                            </span><span class="n">twix_obj</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">timestamp</span><span class="o">*</span><span class="mf">0.0025</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c">  % adc times stamps on a 2.5ms raster; used for correction of trigger delays</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">                            </span><span class="n">softDelay</span><span class="p">,</span><span class="k">...</span><span class="c">                         % soft delay input; used for correction of sequence timings</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                            </span><span class="p">[],</span><span class="w"> </span><span class="k">...</span><span class="c">                               % kz partitions for 3D MRF; used to eliminate unnecessary repetitions</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                            </span><span class="p">[],</span><span class="w"> </span><span class="k">...</span><span class="c">                               % echo mode; default: &#39;spiral_out&#39;</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                            </span><span class="mf">1e-6</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c">                             % raster time for the simulation </span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">                            </span><span class="mi">0</span><span class="p">);</span><span class="w">                                   </span><span class="c">% flag_plot</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">NIso</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="c">% number of isochromats</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">sfac</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">    </span><span class="c">% factor for out-of-slice simulation</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">z</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">NIso</span><span class="p">)</span><span class="o">&#39;</span><span class="w"> </span><span class="o">*</span><span class="n">sfac</span><span class="w"> </span><span class="o">*</span><span class="n">PULSEQ</span><span class="p">.</span><span class="n">FOV</span><span class="p">.</span><span class="n">dz</span><span class="p">;</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">SIM</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_sim_pre</span><span class="p">(</span><span class="n">SIM</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;BLOCH&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">DICT</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_sim_BLOCH</span><span class="p">(</span><span class="n">SIM</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="n">comp_energy</span><span class="p">);</span>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c">%% parameters: dictionary and look-up table</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c">% T1, T2</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">.</span><span class="n">range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span><span class="w">  </span><span class="mi">4</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">.</span><span class="n">factor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.05</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">.</span><span class="n">range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">.</span><span class="n">factor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.05</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_get_param_dict</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;T2&lt;T1&#39;</span><span class="p">});</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">look_up</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">];</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">look_up_names</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;T1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;T2&#39;</span><span class="p">};</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">P</span><span class="w">             </span><span class="p">=</span><span class="w"> </span><span class="n">P</span><span class="p">;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">look_up</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="n">look_up</span><span class="p">;</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">look_up_names</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">look_up_names</span><span class="p">;</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">clear</span><span class="w"> </span><span class="s">P</span><span class="w"> </span><span class="s">look_up</span><span class="w"> </span><span class="s">look_up_names</span><span class="p">;</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-matlab highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">sim_mode</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;BLOCH&#39;</span><span class="p">;</span><span class="w"> </span><span class="c">% &#39;BLOCH&#39; or &#39;EPG&#39;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">comp_energy</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.9999</span><span class="p">;</span><span class="w">  </span><span class="c">% 0 for uncompressed dictionary</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">softDelay</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span><span class="w"> </span><span class="c">% only for cMRF -&gt; twix_obj.hdr.Meas.adFree(7...) * 1e-3</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">.</span><span class="n">range</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span><span class="w">  </span><span class="mi">4</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">.</span><span class="n">factor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.025</span><span class="p">;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">.</span><span class="n">range</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">.</span><span class="n">factor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.025</span><span class="p">;</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">P</span><span class="p">.</span><span class="n">db1</span><span class="p">.</span><span class="n">range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">db1</span><span class="p">.</span><span class="n">step</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mf">0.025</span><span class="p">;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_get_param_dict</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;T2&lt;T1&#39;</span><span class="p">});</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">look_up</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">db1</span><span class="p">];</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">look_up_names</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;T1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;T2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;db1&#39;</span><span class="p">};</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">[</span><span class="n">SEQ</span><span class="p">,</span><span class="w"> </span><span class="n">SIM</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_read_seq_file</span><span class="p">(</span><span class="w"> </span><span class="n">seq_path</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c">                     % path of the original .seq file which was measured</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">                            </span><span class="n">twix_obj</span><span class="p">.</span><span class="n">hdr</span><span class="p">.</span><span class="n">Meas</span><span class="p">.</span><span class="n">lFrequency</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c">     % f0; used for actual frequency offsets in fat suppression, CEST or WASABI modules</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                            </span><span class="n">twix_obj</span><span class="p">.</span><span class="n">image</span><span class="p">.</span><span class="n">timestamp</span><span class="o">*</span><span class="mf">0.0025</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c">  % adc times stamps on a 2.5ms raster; used for correction of trigger delays</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                            </span><span class="n">softDelay</span><span class="p">,</span><span class="k">...</span><span class="c">                         % soft delay input; used for correction of sequence timings</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                            </span><span class="p">[],</span><span class="w"> </span><span class="k">...</span><span class="c">                               % kz partitions for 3D MRF; used to eliminate unnecessary repetitions</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                            </span><span class="p">[],</span><span class="w"> </span><span class="k">...</span><span class="c">                               % echo mode; default: &#39;spiral_out&#39;</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                            </span><span class="mf">1e-6</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c">                             % raster time for the simulation </span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                            </span><span class="mi">0</span><span class="p">);</span><span class="w">                                   </span><span class="c">% flag_plot</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">NIso</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="c">% number of isochromats</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">sfac</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">    </span><span class="c">% factor for out-of-slice simulation</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">z</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">NIso</span><span class="p">)</span><span class="o">&#39;</span><span class="w"> </span><span class="o">*</span><span class="n">sfac</span><span class="w"> </span><span class="o">*</span><span class="n">PULSEQ</span><span class="p">.</span><span class="n">FOV</span><span class="p">.</span><span class="n">dz</span><span class="p">;</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="n">SIM</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_sim_pre</span><span class="p">(</span><span class="n">SIM</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;BLOCH&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">DICT</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_sim_BLOCH</span><span class="p">(</span><span class="n">SIM</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="n">comp_energy</span><span class="p">);</span>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c">%% parameters: dictionary and look-up table</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c">% T1, T2, T1p</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">.</span><span class="n">range</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span><span class="w">  </span><span class="mi">4</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">.</span><span class="n">factor</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mf">1.05</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">.</span><span class="n">range</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">.</span><span class="n">factor</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mf">1.05</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">P</span><span class="p">.</span><span class="n">T1p</span><span class="p">.</span><span class="n">range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T1p</span><span class="p">.</span><span class="n">factor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.05</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_get_param_dict</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;T2&lt;T1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;T2&lt;T1p&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;T1p&lt;T1&#39;</span><span class="p">});</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">look_up</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T1p</span><span class="p">];</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">look_up_names</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;T1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;T2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;T1p&#39;</span><span class="p">};</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">P</span><span class="w">             </span><span class="p">=</span><span class="w"> </span><span class="n">P</span><span class="p">;</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">look_up</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="n">look_up</span><span class="p">;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">look_up_names</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">look_up_names</span><span class="p">;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="n">clear</span><span class="w"> </span><span class="s">P</span><span class="w"> </span><span class="s">look_up</span><span class="w"> </span><span class="s">look_up_names</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c">%% parameters: dictionary and look-up table</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c">% T1, T2, B1+ correction</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">.</span><span class="n">range</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span><span class="w">  </span><span class="mi">4</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">.</span><span class="n">factor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.025</span><span class="p">;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">.</span><span class="n">range</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">.</span><span class="n">factor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.025</span><span class="p">;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">P</span><span class="p">.</span><span class="n">db1</span><span class="p">.</span><span class="n">range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="p">];</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">db1</span><span class="p">.</span><span class="n">step</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mf">0.025</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MRF_get_param_dict</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;T2&lt;T1&#39;</span><span class="p">});</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">look_up</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">P</span><span class="p">.</span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">T2</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">db1</span><span class="p">];</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">look_up_names</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;T1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;T2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;db1&#39;</span><span class="p">};</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">P</span><span class="w">             </span><span class="p">=</span><span class="w"> </span><span class="n">P</span><span class="p">;</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">look_up</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="n">look_up</span><span class="p">;</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="n">params_dict</span><span class="p">.</span><span class="n">look_up_names</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">look_up_names</span><span class="p">;</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">clear</span><span class="w"> </span><span class="s">P</span><span class="w"> </span><span class="s">look_up</span><span class="w"> </span><span class="s">look_up_names</span><span class="p">;</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
-<div class="footnote">
+<h3 id="range-definitions">Range Definitions</h3>
+<p>The look-up table is generated from the fields in <code>P</code>. For each parameter, you can either define:
+- a <code>range</code> together with a multiplicative <code>factor</code>, or
+- a <code>range</code> together with a fixed <code>step</code></p>
+<p>This allows flexible sampling of the parameter space depending on the application.</p>
+<h3 id="constraints">Constraints</h3>
+<p>The function <code>MRF_get_param_dict()</code> also supports constraints between parameters. For example:
+- <code>'T2&lt;T1'</code>
+- <code>'T2&lt;T1p'</code>
+- <code>'T1p&lt;T1'</code></p>
+<p>These constraints help exclude physically implausible combinations and reduce the total dictionary size.</p>
 <hr />
-<ol>
-<li id="fn:1">
-<p>McGivney DF, Pierre E, Ma D, Jiang Y, Saybasili H, Gulani V, Griswold MA. SVD compression for magnetic resonance fingerprinting in the time domain. IEEE Trans Med Imaging. 2014 Dec;33(12):2311-22. doi: 10.1109/TMI.2014.2337321.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
+<h2 id="3-b1-correction">3. B1+ Correction</h2>
+<p>Especially at field strengths of 3T and above, it can be beneficial to include B1+ deviations as an additional parameter in the dictionary.</p>
+<p>This increases the dictionary size and computational cost, but may improve the quantitative accuracy if the sequence contains enough information to separate B1+ effects from relaxation effects.</p>
+<div class="admonition warning">
+<p class="admonition-title">Confounding effects of B1+ and T2</p>
+<p>If the MRF sequence does not contain dedicated T2 preparation modules, the effects of T2 relaxation and B1+ inhomogeneity may not be separable in a robust way. In such cases, including B1+ as an additional parameter may lead to unstable or ambiguous matching results.</p>
 </div>
+<p>In general, B1+ correction is most meaningful for sequences that contain sufficient contrast encoding, for example through multiple inversions and dedicated T2 preparations.</p>
+<hr />
+<h2 id="4-a-look-under-the-hood">4. A Look Under the Hood</h2>
+<p>The sections above describe the parameters that users typically need to choose. Internally, however, OpenMRF performs several additional processing steps before the actual dictionary simulation starts.</p>
+<p>The key idea is that the <code>.seq</code> file is not simulated directly line by line during matching. Instead, it is first translated into a compact list of simulation instructions stored in the <code>SIM</code> struct. This provides a general intermediate representation that can be interpreted efficiently by the Bloch or EPG simulator.</p>
+<h3 id="from-seq-file-to-sim-struct">From <code>.seq</code> File to <code>SIM</code> Struct</h3>
+<p>The conversion from Pulseq sequence to simulation instructions is performed when the sequence is read and analyzed. During this step, OpenMRF automatically detects different sequence scenarios and classifies the events accordingly.</p>
+<p>Examples of automatically detected conditions include:</p>
+<ul>
+<li>conventional RF excitations</li>
+<li>slice-selective excitation pulses</li>
+<li>slice-selective refocusing pulses</li>
+<li>adiabatic pulses</li>
+<li>continuous-wave spin-lock modules</li>
+<li>adiabatic spin-lock modules</li>
+<li>timing blocks, gradient moments, and frequency offsets</li>
+</ul>
+<p>These events are converted into a compact instruction set stored in fields such as:</p>
+<ul>
+<li><code>SIM.ID</code></li>
+<li><code>SIM.RF</code></li>
+<li><code>SIM.GX</code>, <code>SIM.GY</code>, <code>SIM.GZ</code></li>
+<li><code>SIM.DB</code></li>
+<li><code>SIM.DT</code></li>
+<li><code>SIM.PHI</code></li>
+</ul>
+<p>The purpose of this conversion is to replace the raw sequence description by a simulation-friendly representation that preserves the relevant physics while avoiding repeated high-level parsing during dictionary generation.</p>
+<h3 id="pre-simulations-before-dictionary-generation">Pre-Simulations Before Dictionary Generation</h3>
+<p>Before the <code>SIM</code> struct is used for the actual dictionary simulation, OpenMRF performs several pre-simulation steps. These steps generate reusable building blocks that make the final simulation much faster.</p>
+<h4 id="slice-profile-pre-simulation">Slice Profile Pre-Simulation</h4>
+<p>For slice-selective pulses, OpenMRF precomputes slice profiles in 1° steps. These profiles are generated once and then stored for later reuse.</p>
+<p>This means that during the final dictionary simulation, the simulator does not need to recompute the full slice profile response for every dictionary entry. Instead, it can directly access the precomputed slice-profile operators from the <code>SIM</code> struct.</p>
+<p>The corresponding precomputed data are stored in:</p>
+<ul>
+<li><code>SIM.SPROF</code></li>
+</ul>
+<p>This is one of the key reasons why OpenMRF can model slice-profile effects while still keeping the final dictionary calculation practical.</p>
+<h4 id="transition-matrices-for-adiabatic-pulses">Transition Matrices for Adiabatic Pulses</h4>
+<p>Adiabatic RF pulses are long and cannot simply be treated as ideal instantaneous rotations. Relaxation occurs during the pulse itself, and this effect depends on the tissue parameters.</p>
+<p>To handle this efficiently, OpenMRF precomputes a <strong>transition matrix</strong> for each adiabatic pulse. This matrix describes how the magnetization is transformed from the state before the pulse to the state after the pulse while accounting for relaxation during the pulse.</p>
+<p>Importantly, these transition matrices are <strong>T1- and T2-dependent</strong>. They are therefore calculated in advance for the parameter combinations represented in the look-up table and stored for later use.</p>
+<p>The corresponding data are stored in:</p>
+<ul>
+<li><code>SIM.TM</code></li>
+</ul>
+<p>During the final dictionary simulation, the simulator can then apply these precomputed matrices directly instead of re-simulating the full adiabatic waveform every time. This greatly accelerates the simulation while preserving the relevant physics.</p>
+<h4 id="adiabatic-spin-lock-and-additional-sequence-logic">Adiabatic Spin-Lock and Additional Sequence Logic</h4>
+<p>OpenMRF also detects specific conditions such as adiabatic spin-locking and stores the necessary reduced information in the <code>SIM</code> struct. In this way, the final simulator operates on a compact and sequence-aware instruction list rather than on the original waveform objects.</p>
+<p>This makes the framework highly flexible: new MRF concepts can often be supported automatically as long as their sequence logic can be recognized during <code>.seq</code> parsing and translated into the <code>SIM</code> representation.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>This internal workflow is one of the main strengths of OpenMRF:</p>
+<ol>
+<li>The <code>.seq</code> file is interpreted directly  </li>
+<li>The sequence is translated into a compact <code>SIM</code> instruction list  </li>
+<li>Pre-simulations generate reusable operators such as slice profiles and adiabatic transition matrices  </li>
+<li>The final dictionary simulation becomes both accurate and efficient</li>
+</ol>
+<p>In short, OpenMRF combines a very general sequence description with targeted precomputation. This makes it possible to support complex MRF concepts—such as slice-profile-aware Bloch simulation, spin-locking, adiabatic spin-locking, and relaxation during long RF pulses—without requiring a custom simulator for every new sequence design.</p>
 
 
 
@@ -1174,7 +1716,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 21, 2026 17:39:13 UTC">March 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 26, 2026 05:24:03 UTC">March 26, 2026</span>
   </span>
 
     

@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://openmrf.org/wiki/scanner/">
+        <link rel="canonical" href="https://openmrf.org/wiki/single_parameter_mapping/">
       
       
         <link rel="prev" href="../readout_modules/">
       
       
-        <link rel="next" href="../spiral_mapping/">
+        <link rel="next" href="../trajectory/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Scanner selection - OpenMRF Documentation</title>
+        <title>Single Parameter Mapping - OpenMRF Documentation</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#single-parameter-mapping" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -108,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scanner selection
+              Single Parameter Mapping
             
           </span>
         </div>
@@ -484,8 +489,6 @@
       
         
       
-        
-      
     
     
     
@@ -606,6 +609,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../noise_prewhitening/" class="md-nav__link">
         
   
@@ -696,6 +727,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Single Parameter Mapping
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -704,7 +755,7 @@
   <span class="md-ellipsis">
     
   
-    Scanner selection
+    Single Parameter Mapping
   
 
     
@@ -714,62 +765,114 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../spiral_mapping/" class="md-nav__link">
         
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  <span class="md-ellipsis">
+  
     
   
-    Spiral Single Parameter Mapping
   
-
-    
-  </span>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#t1-and-t2-mapping-for-openmrf-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1 and T2 Mapping for OpenMRF Validation
+      
+    </span>
+  </a>
   
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../timestamps/" class="md-nav__link">
+    <nav class="md-nav" aria-label="T1 and T2 Mapping for OpenMRF Validation">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#t1-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1 Mapping
+      
+    </span>
+  </a>
   
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t2-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2 Mapping
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-imaging-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Imaging Parameters
+      
+    </span>
+  </a>
   
-    Timestamps
+</li>
+        
+      </ul>
+    </nav>
   
-
-    
-  </span>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-mapping-for-t1-t2-and-adiabatic-t1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Mapping for T1ρ, T2ρ, and Adiabatic T1ρ
+      
+    </span>
+  </a>
   
+    <nav class="md-nav" aria-label="Reference Mapping for T1ρ, T2ρ, and Adiabatic T1ρ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-acquisition-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Acquisition Scheme
+      
+    </span>
+  </a>
   
-
-      </a>
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rationale-for-spiral-based-reference-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale for Spiral-Based Reference Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -935,6 +1038,105 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#t1-and-t2-mapping-for-openmrf-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1 and T2 Mapping for OpenMRF Validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="T1 and T2 Mapping for OpenMRF Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t1-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1 Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t2-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2 Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-imaging-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Imaging Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-mapping-for-t1-t2-and-adiabatic-t1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Mapping for T1ρ, T2ρ, and Adiabatic T1ρ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference Mapping for T1ρ, T2ρ, and Adiabatic T1ρ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-acquisition-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Acquisition Scheme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rationale-for-spiral-based-reference-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rationale for Spiral-Based Reference Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -954,84 +1156,62 @@
   
 
 
-  <h1>Scanner selection</h1>
-
-<p>If the variable <code>pulseq_scanner</code> is not specified in your sequence creation script before <code>pulseq_init</code>, your default scanner will be selected. </p>
-<div class="admonition info">
-<p class="admonition-title">Default scanner</p>
-<p>The default scanner is set when you first run <code>install_OpenMRF.m</code>. It can be changed later by modifying the corresponding field in <code>user_specifications/user_definitions/pulseq_user_definitions.csv</code>.  </p>
+<h1 id="single-parameter-mapping">Single Parameter Mapping</h1>
+<p>For validation of the OpenMRF framework, it is important to compare MRF results with gold-standard reference measurements obtained with dedicated single-parameter mapping sequences.</p>
+<p>In this context, it is useful to distinguish between two categories:</p>
+<ul>
+<li><strong>T1 and T2 mapping</strong>, which can be measured using vendor-provided protocols based on spin-echo acquisitions</li>
+<li><strong>Specialized relaxation parameters</strong> such as <strong>T1ρ</strong>, <strong>T2ρ</strong>, or <strong>adiabatic T1ρ</strong>, which are usually not available as standard vendor sequences and are therefore provided by dedicated OpenMRF implementations</li>
+</ul>
+<hr />
+<h2 id="t1-and-t2-mapping-for-openmrf-validation">T1 and T2 Mapping for OpenMRF Validation</h2>
+<p>For OpenMRF validation, T1 and T2 reference measurements were acquired using single-parameter spin-echo-based mapping protocols.</p>
+<h3 id="t1-mapping">T1 Mapping</h3>
+<p>The T1 mapping protocol for the acquisition of T1-weighted images uses:</p>
+<ul>
+<li>adiabatic inversion pulse</li>
+<li>identical spin-echo readouts</li>
+<li>minimal TE (e.g. 6.4 ms)</li>
+<li>TR = 5 s</li>
+<li>inversion delays: 35, 60, 95, 160, 260, 430, 710, 1180, 1940, 3200 ms</li>
+</ul>
+<h3 id="t2-mapping">T2 Mapping</h3>
+<p>The T2 mapping protocol for the acquisition of T2-weighted images uses:</p>
+<ul>
+<li>identical spin-echo sequence without inversion</li>
+<li>TR = 5 s</li>
+<li>echo times: 10, 15, 20, 30, 40, 60, 85, 120, 175, 250 ms</li>
+</ul>
+<h3 id="common-imaging-parameters">Common Imaging Parameters</h3>
+<ul>
+<li>FOV: 250 × 250 mm</li>
+<li>Matrix: 128 × 128</li>
+<li>Slice thickness: 6 mm</li>
+<li>Bandwidth: 281 Hz/pixel</li>
+</ul>
+<p>The corresponding reconstruction and mapping code is available in:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>include_misc/src_nist_values/reco_spin_echo_T1_T2.m
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are currently working on a Pulseq-based implementation of a standardized spin-echo sequence for T1 and T2 mapping. This will enable vendor-independent, reproducible gold-standard reference measurements within the OpenMRF framework.</p>
 </div>
-<p>You can compile a sequence for a scanner that is not set as your default by explicitly setting the variable <code>pulseq_scanner</code> to the name of an alternative scanner. See the following example. Assume the default scanner is set to <code>'Siemens_Sola_1,5T_MIITT'</code>. </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Use default scanner</label><label for="__tabbed_1_2">Use alternative scanner</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">pulseq_mrf.m</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c">%% init pulseq</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">clear</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">seq_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;mrf_&#39;</span><span class="p">;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c">% optional flags</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">flag_backup</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% 0: off,  1: only backup</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">flag_report</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% 0: off,  1: only timings, 2: full report (slow)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">flag_pns</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% 0: off,  1: simulate PNS stimulation</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">flag_sound</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% 0: off,  1: simulate gradient sound</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">flag_mrf</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% 0: off,  1: simulate sequence via MRF toolbox</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c">% init system, seq object and load pulseq user information</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="n">pulseq_init</span><span class="p">();</span>
-</span></code></pre></div></td></tr></table></div>
-This will set the system specifications to the values defined in <code>user_specifications/system_definitions/Siemens_Sola_1,5T_MIITT.csv</code>.</p>
-</div>
-<div class="tabbed-block">
-<p><div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">pulseq_mrf.m</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c">%% init pulseq</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">clear</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">seq_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;mrf_&#39;</span><span class="p">;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c">% optional flags</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">flag_backup</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% 0: off,  1: only backup</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">flag_report</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% 0: off,  1: only timings, 2: full report (slow)</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">flag_pns</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% 0: off,  1: simulate PNS stimulation</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="n">flag_sound</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% 0: off,  1: simulate gradient sound</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">flag_mrf</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">% 0: off,  1: simulate sequence via MRF toolbox</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="n">pulseq_scanner</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;Siemens_FreeMax_0,55T_MIITT&#39;</span><span class="p">;</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c">% init system, seq object and load pulseq user information</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="n">pulseq_init</span><span class="p">();</span>
-</span></code></pre></div></td></tr></table></div>
-This will set the system specifications to the values defined in <code>user_specifications/system_definitions/Siemens_FreeMax_0,55T_MIITT.csv</code>.</p>
-</div>
-</div>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Scanner selection</p>
-<p>Never run a sequence on a scanner that it was not compiled for. While your scanner should usually detect if a sequence exceeds certain limits, this can't be guaranteed, and you risk damaging your system. </p>
-</div>
+<hr />
+<h2 id="reference-mapping-for-t1-t2-and-adiabatic-t1">Reference Mapping for T1ρ, T2ρ, and Adiabatic T1ρ</h2>
+<p>Reference measurements for <strong>T1ρ</strong>, <strong>T2ρ</strong>, and <strong>adiabatic T1ρ</strong> are not typically available as vendor-provided product sequences. For these parameters, OpenMRF provides dedicated implementations for both sequence compilation and reconstruction.</p>
+<p>The corresponding source code can be found in:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>main_sequence/relax_mapping
+</span></code></pre></div>
+<p>These reference mapping sequences are based on an <strong>interleaved spiral readout</strong>.</p>
+<h3 id="default-acquisition-scheme">Default Acquisition Scheme</h3>
+<p>By default:</p>
+<ul>
+<li>each preparation time is acquired with an <strong>8× interleaved spiral readout</strong></li>
+<li>a <strong>5 s recovery delay</strong> is applied between different readouts</li>
+</ul>
+<h3 id="rationale-for-spiral-based-reference-mapping">Rationale for Spiral-Based Reference Mapping</h3>
+<p>The main advantage of the spiral mapping approach is that the readout is primarily <strong>proton-density weighted</strong>, while the image contrast is dominated mainly by the preceding <strong>T1ρ</strong>, <strong>T2ρ</strong>, or <strong>adiabatic T1ρ</strong> preparation.</p>
+<p>This is important because it supports the use of a <strong>monoexponential signal model</strong> for fitting, which is typically assumed for these relaxation parameters.</p>
 
 
 
@@ -1054,7 +1234,7 @@ This will set the system specifications to the values defined in <code>user_spec
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 21, 2026 17:39:13 UTC">March 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 26, 2026 05:24:03 UTC">March 26, 2026</span>
   </span>
 
     
@@ -1064,7 +1244,7 @@ This will set the system specifications to the values defined in <code>user_spec
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 21, 2026 17:39:13 UTC">March 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 26, 2026 05:24:03 UTC">March 26, 2026</span>
   </span>
 
     
