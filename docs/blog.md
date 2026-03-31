@@ -4,12 +4,10 @@ hide:
 ---
 ## March 25, 2026 - Introducing OpenMRF {#2026-03-25}
 
-**OpenMRF is now live!**  
+### OpenMRF is now live!
 After more than three years of collaborative development, we are excited to share this project with the world on our brand-new website. OpenMRF will facilitate rapid MRF sequence prototyping and enable cross-vendor studies to improve qMRI standardization and reproducibility.
 
 As part of this release, we have moved all code to a new [GitHub Organization](https://github.com/OpenMRF) — please use the [openmrf-core-matlab](https://github.com/OpenMRF/openmrf-core-matlab) repository there going forward.
-
----
 
 ### ISMRM 2026 – Cape Town
 
@@ -27,7 +25,7 @@ Other exciting news: we have a number of talks and digital posters on OpenMRF an
 - *Unlocking the Spin-Lock: Open-Source and Vendor-Agnostic Cardiac T1ρ Fingerprinting with Pulseq*  
   *(Presenter: Maximilian Gram)*
 
-<br>
+<!-- <br> -->
 
 **4:00 PM — Oral Session: _MR Fingerprinting_**
 
@@ -43,7 +41,7 @@ Other exciting news: we have a number of talks and digital posters on OpenMRF an
 - *Initial Tests of Cardiac Magnetic Resonance Fingerprinting at 5T on a Whole-Body MRI Scanner Using Pulseq*  
   *(Presenter: Maximilian Gram)*
 
-<br>
+<!-- <br> -->
 
 **4:00 PM — Oral Session: _Applications of Quantitative MRI in the Body_**
 

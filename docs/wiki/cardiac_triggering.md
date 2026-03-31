@@ -98,9 +98,7 @@ This is handled in the `mrf_reco()` pipeline via `MRF_read_seq_file()`:
                               0);
 ```
 
-Please refer to the example reconstruction script  
-`main_sequences/fingerprinting/reco_mrf.m`  
-and enter the soft delay in the following section:
+Please refer to the example reconstruction script `main_sequences/fingerprinting/reco_mrf.m` and enter the soft delay in the following section:
 
 ```matlab
 %% parameters: dictionary simulation
