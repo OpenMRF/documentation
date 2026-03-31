@@ -1227,7 +1227,7 @@ If you have a <code>.asc</code> file for your scanner, add it under <code>user_s
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Scanner selection</p>
-<p>Every time you compile a sequence, the currently selected scanner specifications will be printed to the terminal. If the variable <code>pulseq_scanner</code> is not specified before <code>pulseq_init</code> in your sequence creation script, your default scanner will be automatically selected. More information <a href="wiki/scanner.md">here</a>.</p>
+<p>Every time you compile a sequence, the currently selected scanner specifications will be printed to the terminal. If the variable <code>pulseq_scanner</code> is not specified before <code>pulseq_init</code> in your sequence creation script, your default scanner will be automatically selected.</p>
 </div>
 <h2 id="4-take-a-look-around">4. Take a look around!</h2>
 <p>OpenMRF is a comprehensive framework with many different parts to it. For getting started, we strongly recommend taking a closer look at all the different examples in the <code>main_sequences</code> folder, and especially at the example MRF sequences in <code>main_sequences/fingerprinting</code>. In every subfolder, you will find code to compile the respective sequence (usually starts with <code>pulseq_....m</code>) as well as the corresponding code for reconstruction of the acquired raw data (usually starts with <code>reco_....m</code>). </p>
@@ -1267,7 +1267,8 @@ to show PNS in all major slice orientations. </li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">PNS Simulation</p>
-<p>Even when the simulated PNS is under 100%, your sequence might not run on the scanner. Based on our experience we recommend staying under 85%. PNS can be reduced by adjusting the gradient slew rates. More information <a href="../troubleshoot/#stimulation-limit-exceeded">here</a>. </p>
+<p>Even when the simulated PNS is under 100%, your sequence might not run on the scanner. Based on our experience we recommend staying under 85%. PNS can be reduced by adjusting the gradient slew rates. 
+<!-- More information <a href="troubleshoot.md#stimulation-limit-exceeded">here</a>.  --></p>
 </div>
 <ul>
 <li><code>flag_sound</code>: when set to 1, the sound resulting from gradient vibrations when running your sequence will be simulated and played by your default speaker. </li>
@@ -1308,7 +1309,7 @@ to show PNS in all major slice orientations. </li>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 25, 2026 21:35:05 UTC">March 25, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 31, 2026 17:39:09 UTC">March 31, 2026</span>
   </span>
 
     
