@@ -20,19 +20,19 @@ Other exciting news: we have a number of talks and digital posters on OpenMRF an
 **1:51 PM — Oral Session: _Quantitative Imaging: Applications_ (1:40-3:30 PM)**
 
 - *OpenMRF: A Modular, Vendor-Neutral Open-Source Framework for Reproducible Magnetic Resonance Fingerprinting using Pulseq*  
-  *(Presenter: Tom Griesler)*
+  *(Abstract \#00659, Presenter: Tom Griesler)*
 
 **2:46 PM - Oral Session: _End-to-End Software Innovation_ (1:40-3:30 PM)**
 
 - *Unlocking the Spin-Lock: Open-Source and Vendor-Agnostic Cardiac T1ρ Fingerprinting with Pulseq*  
-  *(Presenter: Maximilian Gram)*
+  *(Abstract \#00604, Presenter: Maximilian Gram)*
 
 <!-- <br> -->
 
 **4:55 PM — Oral Session: _MR Fingerprinting_ (4:00-5:50 PM)**
 
 - *Cardiac MRF Optimization at 3T Using Rosette Trajectories and MT Modeling in OpenMRF*  
-  *(Presenter: Nicole Seiberlich)*
+  *(Abstract \#00881, Presenter: Nicole Seiberlich)*
 
 ---
 
@@ -41,14 +41,14 @@ Other exciting news: we have a number of talks and digital posters on OpenMRF an
 **9:15 AM — Digital Poster Session: _Open-Source Software, Sequences, and Reconstruction Algorithms_**
 
 - *Initial Tests of Cardiac Magnetic Resonance Fingerprinting at 5T on a Whole-Body MRI Scanner Using Pulseq*  
-  *(Presenter: Maximilian Gram)*
+  *(Abstract \#02134, Presenter: Maximilian Gram)*
 
 <!-- <br> -->
 
 **4:44 PM — Oral Session: _Applications of Quantitative MRI in the Body_ (4:00-5:50 PM)**
 
 - *Kidney T1/T2/T2\*/T1ρ/PDFF Mapping with OpenMRF: Initial Results and Adiabatic vs. Continuous Wave Spin Locking*  
-  *(Presenter: Tom Griesler)*
+  *(Abstract \#00661, Presenter: Tom Griesler)*
 
 ---
 
@@ -57,7 +57,7 @@ Other exciting news: we have a number of talks and digital posters on OpenMRF an
 **9:25 AM — Digital Poster Session: _Multiparametric Quantitative MR Methods_**
 
 - *Wideband Magnetic Resonance Fingerprinting for T1 and T2 Mapping Near Cardiac Implantable Electronic Devices*  
-  *(Presenter: Jesse Hamilton)*
+  *(Abstract \#00397, Presenter: Jesse Hamilton)*
 
 ---
 
