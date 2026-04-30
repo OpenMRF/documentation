@@ -27,12 +27,12 @@ hide:
 <br>
 
 # Welcome to OpenMRF! 
-OpenMRF is currently under active development. A corresponding publication describing the framework in detail will be released soon. Please watch out for this publication and use it for citation once available.
+OpenMRF is currently under active development. The publication describing the framework in detail has been submitted to _Magnetic Resonance in Medicine_ as is available as a preprint on [arXiv](https://arxiv.org/abs/2604.22713). 
 
 We will present OpenMRF at ISMRM 2026 in Cape Town:
 > **Griesler T., Stebani J., Kaplan S., Angelov I., Albertova P., Blaimer M., Jakob P. M., Wech T., Zaitsev M., Chen Q., Wang X., Hamilton J., Nielsen J.-F., Nordbeck P., Seiberlich N., Gram M.**  
 > *OpenMRF: A Modular, Vendor-Neutral Open-Source Framework for Reproducible Magnetic Resonance Fingerprinting using Pulseq.*  
-> ISMRM 2026, Cape Town, Abstract #00659.
+> ISMRM 2026, Cape Town, Abstract 409-03-002.
 
 ## New to OpenMRF? 
 We strongly recommend getting started by reading the [Quickstart guide](quickstart.md) carefully. For more detailed information on specific topics, refer to the [wiki](wiki/index.md).
